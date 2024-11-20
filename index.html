@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  height: auto;
+  background-color: antiquewhite;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  top: 10px;
+}
+
+#taskList {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#taskList div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  gap: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#taskList div span {
+  flex-grow: 1;
+}
+
+#searchInput {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 2px;
+}
+
+#add {
+  padding: 7px 7px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-family: cursive;
+  position: relative;
+  top: 10px;
+  left: 8px;
+  background-color: #fcf;
+}
+
+#clr {
+  cursor: pointer;
+  font-family: cursive;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff8dc;
+}
+
+button#Del {
+  background-color: tomato;
+  font-family: cursive;
+}
+
+button#Edit {
+  background-color: greenyellow;
+  font-family: cursive;
+}
+
+button {
+  padding: 10px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+
+button#Del:hover,#Edit:hover,#add:hover,#clr:hover {
+  background-color: aqua;
+}
+
+button#Del:active,#Edit:active,#add:active {
+  background-color: aquamarine;
+}
+
+input[type="text"],#task {
+  position: relative;
+  top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-family: cursive;
+}
+
+#chk {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+p#empty {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+   <span> <input type="text" name="taskName" id="taskName" placeholder="Please enter a task"><button id="add">ADD TASK</button></span>
+    <p id="empty"></p>
+    <div id="container">
+        <input type="text" id="searchInput" placeholder="search for a task">
+    <div id="taskList">
+ 
+    </div>
+</div>
+    <script src="./index.js"></script>
+    
+</body>
+</html>
